@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+            ul {
+    list-style-type:none;
+}
+        
+    </style>
+</head>
+<body>
+
+    <h1>TodoProject</h1>
+    
+    <h4>SUMMARY: {{completed}} / {{todo_all}} todos completed</h4>
+    <h1 style="margin-left: 35px;">PENDING</h1>
+    {%for t in todo_pend%}
+    <ul>
+        <li><input type="checkbox">
+            {{t.task_name}}
+        </li>
+      
+
+    </ul>  
+
+    {%endfor%}
+    
+
+    <h1 style="margin-left: 35px;">COMPLETED</h1>
+
+    {%for t in todo_completed%}
+    <ul>
+        <li><input type="checkbox">
+            {{t.task_name}}
+        </li>
+      
+
+    </ul>  
+    
+
+    {%endfor%}
+
+    <button> <a href="https://github.com/login" class="btn btn-outline-danger" disabled>Export Summary into Github </a> </button>
+</body>
+</html>
