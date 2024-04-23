@@ -33,8 +33,8 @@ urlpatterns = [
     path("todos/<int:pk>/remove/",views.TodoDeleteView.as_view(),name="todo-delete"),
     path("todos/<int:pk>/change/",views.TodoEditView.as_view(),name="todo-edit"),
     path("todos/completed/",views.TodoCompletedView.as_view(),name="todo-completed"),
-    path("register/",views.SignUpView.as_view(),name="register"),
-    path("",views.SignInView.as_view(),name="signin"),
+    path("",views.SignUpView.as_view(),name="register"),
+    path("login/",views.SignInView.as_view(),name="signin"),
     path("logout/",views.signout_view,name="emp-signout")
     
 ]
